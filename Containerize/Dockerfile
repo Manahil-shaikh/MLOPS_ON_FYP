@@ -12,7 +12,7 @@ COPY newapp.py /app/newapp.py
 
 ADD newapp.py .
 
-RUN pip install opencv-python numpy pandas 
+RUN pip install opencv-python numpy pandas tensorflow==2.12.* matplotlib
 
 EXPOSE 5000
 
