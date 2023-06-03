@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CKD Prediction</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style1.css') }}"
+  </head>
+  <body>
+<div class="wrapper">
+
+<div class="wrapper">
+
+            
+            <h1 style="text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+			font-size: 36px; font-weight: normal; text-align: center; 
+			color: white; backdrop-filter: blur(80px);">Chronic Kidney Disease Detection using Light-Weight U-Net and Feature Upscaling Technique</h1>
+
+            <!-- Header -> logo and menu (links to other pages) -->
+            <header>
+
+                <h1></h1>
+                
+                <div class="logo">
+
+                    <a href="index.html"><img src="{{ url_for('static',filename='styles/Logo.png') }}"></a>
+                    
+                     <div class="logo-link">
+                        <a href="index.html"> CKD Segmentation</a>
+                    </div>
+				</div>	
+				
+				
+				<h1 style="color:white;">IMAGE SEGMENTATION PREDICTION</h1>
+				<form method="post" action="{{ url_for('predict') }}" enctype="multipart/form-data">
+					<input type="file" name="image" accept="image/*" required style="width: 200px; height: 40px;background-color:gray;color: white;
+						padding: 10px 20px;border: none;border-radius: 4px;">
+
+					<br></br>
+					
+					<button style="margin-left:305px; float:center; type="submit">Predict</button>
+				</form>
+                
+
+             <div class="clearfix"></div>
+                
+            </header>  
+			<div class="content">
+    
+				
+                    <p style=  "text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+					font-size: 24px; font-weight: normal; text-align: center; backdrop-filter: blur(50px);
+					color: white;">
+					
+						Chronic kidney disease (CKD) refers to any long-term condition which deteriorates the
+						functionality of the kidney in body waste filtration. The disease could be treated if diagnosed timely.
+						Keeping this problem domain in view, the proposed approach includes the adaptive machine learning
+						techniques for chronic kidney disease detection to trace the infected areas and create a base for kidney
+						image analysis.  Therefore, it can play a considerable role in a patient's health care and diagnostics.</p>
+							
+            </div>
+            <div class="clearfix"></div>
+</div>
+</body>
