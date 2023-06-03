@@ -12,7 +12,7 @@ COPY newapp.py /app/newapp.py
 
 ADD newapp.py .
 
-RUN pip install opencv-pyth numpy pandas 
+RUN pip install opencv-python numpy pandas 
 
 EXPOSE 5000
 
