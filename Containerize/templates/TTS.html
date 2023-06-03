@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Segmentation</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+
+<body style="background-color:rgb(243, 241, 241);">
+    <div class="body2-right">
+        <div class="Segmentation">
+            Image Segmentation
+        </div>
+
+        <form class = "form" method="post" action="{{ url_for('predict') }}" enctype="multipart/form-data">
+            <label for="file-upload">
+                <div class="upload-file1">
+                    
+                   <div style="font-family: 'Roboto Slab', serif; font-size:20px;text-transform: uppercase;" class="upload-file">
+                    <div class="logo3"> <img src="{{ url_for('static',filename='styles/upload.png') }}"></div>
+                    <b>Upload file</b>
+                   </div>
+                   <button 
+                   style="border: none;
+                   border-radius: 20px solid;
+                   margin-left:305px; 
+                   float:right;
+                   color:#0c5896; 
+                   background: transparent!important;
+                   border: 2px solid #0c5896;
+                   text-transform: uppercase;
+                   font-size: 20px; 
+                   max-width: 991.98px;
+                   margin-bottom:25px;
+                   background-color:#0c5896; 
+                   font-weight: 500;
+                   height: 36px; 
+                   width: 225px;
+                   margin-top:25px;
+                   margin-left:25px;
+                   font-family: 'Roboto Slab', serif;"
+                   class="FAQ"
+                   class =  "button-predict" type="submit">
+                    
+                        <b>Predict</b>
+                    </button>
+
+                </div> 
+            </label>
+            <input id="file-upload" type="file" name="image" accept="image/*" style="display: none;"> 
+        </form>
+   
+    </div>
+</body>
