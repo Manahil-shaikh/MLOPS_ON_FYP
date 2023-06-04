@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.10.11
 
 WORKDIR /app
 
@@ -12,8 +12,13 @@ COPY newapp.py /app/newapp.py
 
 ADD newapp.py .
 
-RUN pip install opencv-python numpy pandas tensorflow==2.12.* matplotlib
+RUN pip install opencv-contrib-python numpy pandas tensorflow matplotlib Flask
+RUN apt-get update && apt-get install -y \
+    libgl1-mesa-glx \
+    && rm -rf /var/lib/apt/lists/*
+
 
 EXPOSE 5000
 
 CMD [ "python" , "./newapp.py" ]
+
