@@ -1,1 +1,9 @@
+outs:
+  - path: data.xml
+    desc: data
+    remote: myremote
 
+# Comments and user metadata are supported.
+meta:
+  name: 'FYP'
+  email: i191661@nu.edu.pk
